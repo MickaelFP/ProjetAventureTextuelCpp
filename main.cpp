@@ -16,8 +16,12 @@ int main()
 	p1.setSantePhysique(50);
 	p1.setSanteMentale(20);
     p1.setBoire(false);
+    p1.setLanpeTorche(100);
 	p1.setNom("Rupert");
 	p1.showInfos();
+    Item Bouteille ("heal",10);
+    Item BoiteDePillules("recovery",5);
+    Item Piles("recharge",20);
 	cout << endl;
 
     

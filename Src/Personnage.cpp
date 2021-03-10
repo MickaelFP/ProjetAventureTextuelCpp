@@ -2,19 +2,21 @@
 
 Personnage::Personnage()
 {
-    santePhysique = 100;
-    santeMentale = 0;
+    santePhysique = 50;
+    santeMentale = 20;
     boire = false;
+    lampeTorche = 100;
     nom = "Default";
 }
 
-Personnage::Personnage(int p,int m)
+Personnage::Personnage(int p,int m, int l)
 {
     santePhysique = p;
     santeMentale = m;
+    lampeTorche = l;
 }
 
-Personnage::Personnage(string n)
+Personnage::Personnage(string n,)
 {
     nom = n;
 }
@@ -60,6 +62,7 @@ void Personnage::setSanteMentale(int m)
         cout << " " << getNom() << " Votre esprit est totalement rongé par la la peur et la démence. 
         Vous ne pouvez plus revenir en arrière car n'êtes plus maître de vos choix " << endl;
 		santeMentale = 0;
+        santePhysique = 0;
     }else
     {
         santeMentale = m;
@@ -77,9 +80,30 @@ void Personnage::setNom(string n)
     nom = n;
 }
 
+int Personnage::getLammpeTorche() const
+{
+    return lampeTorche;
+}
+
+void Personnage::setLampeTorche(int l)
+{
+	if (lampeTorche > 100) 
+    {
+		lampeTorche = 100;
+	}
+	else if(lampeTorche < 0)
+    {
+		lampTorche = 0;
+	}
+    else
+    {
+        lampTorche = l;
+    }
+}
+
 bool Personnage::getBoire() const
 {
-    return santeMentale;
+    return boire;
 }
 
 void Personnage::setBoire(bool b)
@@ -103,6 +127,7 @@ void Personnage::showInfos() const
 {
     cout << " santePhysique : " << getsantePhysique() << endl;
     cout << " santeMentale : " << getsanteMentale() << endl;
-    cout << " boire : " << getBoire() << endl;
+    //cout << " boire : " << getBoire() << endl;
     cout << " nom : " << getNom() << endl;
+    cout << " Lampe Torche : "<< getLampeTorche() <<"% " endl;
 }

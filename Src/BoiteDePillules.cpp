@@ -48,3 +48,4 @@ void BoiteDePillules::setQuantity(int q)
 {
     quantity = q;
 }
+

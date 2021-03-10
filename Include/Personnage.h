@@ -40,6 +40,9 @@ class Personnage
         bool getBoire() const;
         void setBoire(int b);
 
+        float getLampeTorche() const;
+        void setLampeTorche(int l);
+
         //AFFICHE LES INFOS DU(DES) Personnage(S)
         void showInfos() const;
 
