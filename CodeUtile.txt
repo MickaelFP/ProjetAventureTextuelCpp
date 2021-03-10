@@ -53,3 +53,125 @@ void Personnage::difficulteEvenement(Personnage* cible)
     cible->setSantePhysique(cible->getSantePhysique() - getDifficulte());
 }
 */
+
+//// INVENTAIRE ////  (pas le temp de tout écrir :'( )
+
+                                main.cpp :
+
+Item potionSoin ("heal",20);
+Item potionBuff("Buff",10);
+Item grenade("damage",40);
+Personnage ennemy (potionSoin)
+personnage.addItem (potionBuff);
+while(enemy.getHelath() > 0 && player.getHealth > 0)
+{
+    cout<<player;
+    cout<<ennemycout<< "que faire!"<<endl<<"1 l'attaquer?"<<endl<<"2 inventaire"<<endl;
+    if(choice == 1)
+    {
+        player.attackEnnemy(ennemy);
+    }else if{
+        player.showinventaire();
+        cout<< "quel item utiliser?"<<endl;
+        //cin>>choice;
+        player.useItem(ennemy,player.get)//(ennemy,choice);
+    }if{
+        ennemy.getHeal() <= 
+    }
+}
+
+
+
+
+                                    Item.h :
+#
+
+bool heal
+bool value
+string type = "heal"
+
+Item (string t,)
+
+void Item::Item(Personnage &cible)
+{
+    if(type == "heal")
+    {
+        cible.setHealth(cible.getHealth()+value);
+    }
+    if(type == "damage")
+    {
+        cible.setHealth(cible.getHealth()-value);
+    }
+    if(type == "buff")
+    {
+        cible.setAttack(cible.getAttack()+value);
+    }
+}
+
+void Item::showInfo()
+{
+    cout<<"type = "<<type<<endl;
+    cout 
+}
+
+
+
+                                Item.cpp :
+
+item::item(string t, int v):type(t),value(v){}
+
+void::useItem
+voi::showInfo
+
+
+                                    Personnage.h :
+
+include string
+include vector
+
+vector<item>inventaire
+showInvetaire
+
+
+
+
+                                Personnage.cpp :
+
+void Personnage::showInventaire()
+{
+    for(Item i : inventaire)
+    {
+
+    }
+}
+
+void personnage::showInventaire(){
+    for(Item i : inventaire)
+    {
+        i.showInfos();
+    }
+}
+
+void personnage::addItem(item i)
+{
+    inventaire.push_back(i);
+}
+
+void personnage::useItem (personnage &cilbe, int item) //int index)
+if (i.getType() == heal){
+    setHealth(getHealth)+i.getValue();
+}
+else if (i.getType() == "damage"){
+    cible.setHealth(cible.getHealth)-i.getValue();
+}
+else if (i.type() == "buff"){
+        //cible.setHealth(cible.getHealth)-i.getValue();
+}
+
+
+
+                                    Personnage.h :
+
+vod show Inventaire;
+void addItem(Item i);
+void useItem(Personnage &cible,Item & i);
