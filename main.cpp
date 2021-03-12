@@ -87,7 +87,7 @@ int main()
     cout<<eventcout<< " Que décidez-vous : "<<endl
     <<" 1 - Forcer la porte ? "<<endl
     <<" 2 - Passer par l'arrière ? "<<endl
-    <<" 3 - Casser une vitre pour ouvrir la porte ? "
+    <<" 3 - Casser une vitre pour ouvrir la porte ? "<<endl;
     /* while(enemy.getHelath() > 0 && player.getHealth > 0)
     {
     cout<<player; 
