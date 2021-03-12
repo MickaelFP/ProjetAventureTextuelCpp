@@ -69,6 +69,7 @@ int main()
     p1.stationPorte(false);
     p1.stationArriere(false);
     p1.stationVitre(false);
+    //// event ////
 
 	p1.showInfos();
     Item Bouteille ("heal",10);
@@ -94,19 +95,19 @@ int main()
     cout<<ennemycout<< "que faire!"<<endl<<"1 l'attaquer?"<<endl<<"2 inventaire"<<endl; */
     if(choice == 1)
     {
-        p1.stationPorte(false);
+        p1.stationPorte(true);
         cout<< "" <<endl;
     }else if( choice == 2)
     {
-        p1.stationArriere(false);
+        p1.stationArriere(true);
         cout<< ""<<endl;
     }
     if (choice == 3)
     {
-        p1.stationVitre(false); 
+        p1.stationVitre(true); 
         cout<< "" <<endl;
     }
-    */
+    
     cout << endl;
 
 
