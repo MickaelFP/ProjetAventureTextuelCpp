@@ -7,9 +7,9 @@ BoiteDePillules::BoiteDePillules()
     setQuantity(1);
 }
 
-BoiteDePillules::BoiteDePillules(int h,int v,int q)
+BoiteDePillules::BoiteDePillules(int r,int v,int q)
 {
-    setRecovery(h);
+    setRecovery(r);
     setValue(v);
     setQuantity(q);
 }
