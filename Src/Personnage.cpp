@@ -110,9 +110,9 @@ void Personnage::setBoire(bool b)
 {
     if (b = true)
     {
-        cout << " " << getNom() << " Vous sentez ceete eau fraîche couler le long de votre gorge.
-        Elle vous fait un bien fou et vous vous santez revigoré " << endl;
-        //
+        cout << " " << getNom() << " Vous sentez l'eau fraîche couler le long de votre gorge.
+        Elle vous fait un bien fou et vous vous sentez revigoré " << endl;
+        cout << "Votre santePhysique passe à : "<< p1.getSantePhysique() << " sur 50" <<endl;
         setSantePhysique += 10;
 		boire = false;
     }else
