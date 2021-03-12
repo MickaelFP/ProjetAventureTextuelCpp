@@ -7,9 +7,9 @@ Piles::Piles()
     setQuantity(1);
 }
 
-Piles::Piles(int r,int v,int q)
+Piles::Piles(int h,int v,int q)
 {
-    setRecharge(r);
+    setRecharge(h);
     setValue(v);
     setQuantity(q);
 }
@@ -34,9 +34,9 @@ int Piles::getQuantity()
     return quantity;
 }
 
-void Piles::setRecharge(int r)
+void Piles::setRecharge(int h)
 {
-    recharge = r;
+    recharge = h;
 }
 
 void Piles::setValue(int v)
