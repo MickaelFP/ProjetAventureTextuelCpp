@@ -137,6 +137,7 @@ showInvetaire
 
                                 Personnage.cpp :
 
+1)
 void Personnage::showInventaire()
 {
     for(Item i : inventaire)
@@ -168,7 +169,59 @@ else if (i.type() == "buff"){
         //cible.setHealth(cible.getHealth)-i.getValue();
 }
 
+2)
+void Personnage::setInventaire(vector<pair<Item,int>>i)
+{
+  inventaire=i;
+}
 
+void Personnage::showinventaire()
+{
+  for(pair<Item,int>i : inventaire)
+    i.first.showInfos()
+}
+
+void Personnage::addItem(Item i, int nb)
+{
+  for(pair<Item,int> p : inventaire)
+  {
+    if(p.first == i)
+    {
+      p.second +=nb;
+      return;
+    }
+  }
+  inventaire.push_back(pair<Item,int>(i,nb));
+}
+
+
+void Personnage::attackEnemy(Personnage &cible)
+{
+  cout<< getName() << "attaque" << cible.getName << "pour" << getAttack() << "degats : " << endl;
+  cible.setHealth(cible.getHeallth() - getAttack());
+  cout << cible;
+}
+
+void Personnage::useItem(Personnage &cible, int index)
+{
+  if(inventaire[index].first.getType() == "Heal")
+  {
+    cible.setHealth(cible.getHealth() + inventaire[index].first.getValue());
+  }
+  inventaire[index].second--;
+  if(inventaire[index].second == 0)
+  {
+    inventaire.erase(inventaire.begin() + index);
+  }
+}
+
+ostream& operator<<(ostream& os,Personnage const & p)
+{
+  os<< "----"<<p.getName()<<"-----"<< endl;
+  os<< "----"<<p.getHealth()<< endl;
+  os<< "----"<<p.getAttack()<< endl << endl;
+  return os;
+}
 
                                     Personnage.h :
 
